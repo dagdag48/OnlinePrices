@@ -145,12 +145,11 @@
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
 
-      const parsedData = JSON.parse(json);
-      products = parsedData.list;
+      products = json.list;
 
       const dateEl = $("date");
-      if (parsedData.date) {
-        dateEl.textContent = `آخر تحديث: ${parsedData.date}`;
+      if (json.date) {
+        dateEl.textContent = `آخر تحديث: ${json.date}`;
         dateEl.hidden = false;
       }
 
