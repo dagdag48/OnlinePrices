@@ -1,10 +1,5 @@
 (() => {
   "use strict";
-  var mydata = fetch("data.json")
-    .then((response) => response.json())
-    .then((data) => {/*console.log(data);*/ products = data; render();})
-    .catch((error) => {console.error("Error loading data.json:", error); showError(); });
- 
 
   const API_URL = "https://script.google.com/macros/s/AKfycbyjTFxSTI6RoXpgbMYcvHyQvwu-Y9UUcQmD8IroQoiip1A3Ce2VGYNuIVPkZ27ZVxWg/exec?mode=1";
   // const API_URL = "https://script.google.com/macros/s/AKfycbwiMDu1iwIesyr5NFMxkzl52q8gXzQQQ1myAw7dxjI/dev";
